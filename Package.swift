@@ -13,33 +13,27 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(url: "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git", exact: "13.5.1"),
+        .package(url: "https://github.com/ly-ads-network/swift-package-manager-fivead.git", exact: "3.0.1"),
     ],
     targets: [
         .target(
             name: "REVUPMediaMaxAdapterLineTarget",
             dependencies: [
                 .target(name: "REVUPMediaMaxAdapterLine"),
-                .target(name: "REVUPMediaMaxAdapterLineMediationAdapter"),
-                .target(name: "FiveAd"),
-                .product(name: "AppLovinSDK", package: "AppLovin-MAX-Swift-Package"),
+                .target(name: "AppLovinMediationLineAdapter"),
+                .product(name: "FiveAd", package: "swift-package-manager-fivead"),
             ],
             path: "Sources"
         ),
         .binaryTarget(
             name: "REVUPMediaMaxAdapterLine",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/REVUPMediaMaxAdapterLine.zip",
-            checksum: "8b2af60d627e581c577cf96b6000ca4c168f607bd265e464f7c45fa9c6dbfe56"
+            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.1.0/REVUPMediaMaxAdapterLine.zip",
+            checksum: "547e555ab177d98e3fa6ebb46859ab28ab776237e52be0c766e44848dcd49632"
         ),
         .binaryTarget(
-            name: "REVUPMediaMaxAdapterLineMediationAdapter",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/AppLovinMediationLineAdapter.xcframework.zip",
-            checksum: "dd09fe917909e3d17fc342c74cabb3e43b6c63c1ca3566aaf6fd633402c0541a"
-        ),
-        .binaryTarget(
-            name: "FiveAd",
-            url: "https://github.com/revup-tnk/REVUP-iOS-SDK/releases/download/1.0.0/FiveAd.xcframework.zip",
-            checksum: "cc764c6545423f3502c6256fbe099ff7fd2839e1accebd0da6a4e1cf66a2752b"
-        ),
+            name: "AppLovinMediationLineAdapter",
+            url: "https://artifacts.applovin.com/ios/com/applovin/mediation/line-adapter/AppLovinMediationLineAdapter-3.0.1.0.zip",
+            checksum: "b99a00e52778bd73ad483f6e9a36ab013c82582a6ec190aec03b39883a33fe00"
+        )
     ]
 )

@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "applovin-max-swift-package",
+      "identity" : "swift-package-manager-fivead",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
+      "location" : "https://github.com/ly-ads-network/swift-package-manager-fivead.git",
       "state" : {
-        "revision" : "b5acf713209298059bb2f09b22d84d523454bc7b",
-        "version" : "13.5.1"
+        "revision" : "7daac26259185d5e375f3e2268d4310143be561e",
+        "version" : "3.0.1"
       }
     }
   ],
